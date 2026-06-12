@@ -1,11 +1,17 @@
+import { useState } from "react";
+import { CORE_CONCEPTS, EXAMPLES } from "./data";
+
 import CoreConcept from "./components/CoreConcept";
 import Header from "./components/Header";
-import componentsImg from "./assets/components.png";
-import jsxImg from "./assets/jsx-ui.png";
-import propsImg from "./assets/config.png";
-import stateImg from "./assets/state-mgmt.png";
+import TabButton from "./components/TabButton";
 
 function App() {
+	const [selectedTab, setSelectedTab] = useState("components");
+
+	function handleSelect(selectedButton) {
+		setSelectedTab(selectedButton);
+	}
+
 	return (
 		<div>
 			<Header />
@@ -13,29 +19,28 @@ function App() {
 				<section id="core-concepts">
 					<h2>Core Concepts</h2>
 					<ul>
-						<CoreConcept
-							title="Components"
-							description="The core UI building block - compose the user interface by combining multiple components"
-							image={componentsImg}
-						/>
-						<CoreConcept
-							title="JSX"
-							description="Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered."
-							image={jsxImg}
-						/>
-						<CoreConcept
-							title="Props"
-							description="Makes components configurable (and therefrom reusable) by passing input data to them."
-							image={propsImg}
-						/>
-						<CoreConcept
-							title="State"
-							description="React-managed data which, when changed, causes the component to re-render & the UI to update."
-							image={stateImg}
-						/>
+						<CoreConcept {...CORE_CONCEPTS[0]} />
+						<CoreConcept {...CORE_CONCEPTS[1]} />
+						<CoreConcept {...CORE_CONCEPTS[2]} />
+						<CoreConcept {...CORE_CONCEPTS[3]} />
 					</ul>
 				</section>
-				<h2>Time to get started!</h2>
+				<section id="examples">
+					<h2>Examples</h2>
+					<menu>
+						<TabButton onSelect={() => handleSelect("components")}>Components</TabButton>
+						<TabButton onSelect={() => handleSelect("jsx")}>JSX</TabButton>
+						<TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
+						<TabButton onSelect={() => handleSelect("state")}>State</TabButton>
+					</menu>
+					<div id="tab-content">
+						<h3>{EXAMPLES[selectedTab].title}</h3>
+						<p>{EXAMPLES[selectedTab].description}</p>
+						<pre>
+							<code>{EXAMPLES[selectedTab].code}</code>
+						</pre>
+					</div>
+				</section>
 			</main>
 		</div>
 	);
