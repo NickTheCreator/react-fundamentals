@@ -76,7 +76,7 @@ return (
         <button onClick={handleClick}>Show Details</button>
         {isVisible && <p>Amazing details!</p>}
     </div>
-);
+	);
 }`,
 	},
 };
