@@ -1,5 +1,5 @@
 // Importando a image 'react-core-concepts.png' como reactImg, basicamente criando uma variavel que "aponta" para o caminho da imagem
-import reactImg from "../assets/react-core-concepts.png";
+import reactImg from "../../assets/react-core-concepts.png";
 
 const reactDescription = ["Fundamental", "Crucial", "Core"];
 

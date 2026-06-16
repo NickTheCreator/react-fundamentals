@@ -1,6 +1,6 @@
 import CoreConcept from "./CoreConcept";
-import Section from "./Section";
-import { CORE_CONCEPTS } from "../data";
+import Section from "../Section";
+import { CORE_CONCEPTS } from "../../data";
 
 export default function CoreConcepts() {
 	return (
