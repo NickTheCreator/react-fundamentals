@@ -32,7 +32,6 @@ export default function Examples() {
 			title={"Example"}
 		>
 			<Tabs
-				ButtonContainer="menu"
 				button={
 					<>
 						<TabButton
