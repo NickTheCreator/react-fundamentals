@@ -22,9 +22,23 @@ The main focus of this project is teaching React fundamentals through a hands-on
 react-fundamentals/
 ├── src/
 │   ├── components/
-│   │   ├── CoreConcept.jsx
-│   │   ├── Header.jsx
-│   │   └── TabButton.jsx
+│   │   ├── CoreConcept/
+│   │   │   ├── CoreConcept.jsx
+│   │   │   ├── CoreConcepts.jsx
+│   │   │   └── index.jsx
+│   │   ├── Example/
+│   │   │   ├── Examples.jsx
+│   │   │   └── index.jsx
+│   │   ├── Header/
+│   │   │   ├── Header.jsx
+│   │   │   └── index.jsx
+│   │   ├── Section/
+│   │   │   ├── Section.jsx
+│   │   │   └── index.jsx
+│   │   └── Tab/
+│   │       ├── TabButton.jsx
+│   │       ├── Tabs.jsx
+│   │       └── index.jsx
 │   ├── assets/
 │   │   ├── components.png
 │   │   ├── config.png
